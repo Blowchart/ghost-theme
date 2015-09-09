@@ -1,0 +1,71 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<main class="content post-single" role="main">
+
+    <article class="{{post_class}}">
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{#post}}
+
+            <div class="row post-columns">
+                <div class="col-xs-3 text-center">
+                    <div class="post-info" id="post-info">
+                        {{#author}}
+                            <div class="post-author">
+                                {{#if image}}
+                                    <div>
+                                        <a href="{{url}}"><img class="img-circle" src="{{image}}" alt="{{name}}" /></a>
+                                    </div>
+                                {{/if}}
+                                by&nbsp;<a href="{{url}}">{{name}}</a>
+                            </div>
+                        {{/author}}
+
+                        <div class="post-data">
+                            <hr />
+                            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMM YYYY"}}</time>
+
+                            {{#if tags}}
+                                <hr />
+                                <div class="post-tags">{{tags separator=" | "}}</div>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-xs-9">
+                    <h1 class="post-title text-center">{{{title}}}</h1>
+                    <section class="post-content">
+                        {{content}}
+                    </section>
+
+                    <section class="share text-center">
+                        <h4>Share on:</h4>
+                        <a class="btn btn-twitter"
+                           href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+                           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <i class="fa fa-twitter"></i>
+                            Twitter
+                        </a>
+                        <a class="btn btn-facebook"
+                           href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                            <i class="fa fa-facebook"></i>
+                            Facebook
+                        </a>
+                        <a class="btn btn-google" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                            <i class="fa fa-google-plus"></i>
+                            Google+
+                        </a>
+                    </section>
+                </div>
+            </div>
+        {{/post}}
+
+    </article>
+
+</main>

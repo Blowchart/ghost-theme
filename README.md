@@ -1,12 +1,12 @@
-# Ghost Boilerplate
+# Blowchart Ghost Theme
 
-Boilerplate theme for [Ghost](http://github.com/tryghost/ghost/). Uses Bootstrap, Font Awesome, Modernizr, and jQuery.
+Theme for [Ghost](http://github.com/tryghost/ghost/) based on Hugh Rawlinson's Boilerplate theme. Uses Bootstrap, Font Awesome, Modernizr, and jQuery.
 
 ## Copyright & License
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Hugh Rawlinson
+Copyright (c) 2015 Blowchart
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

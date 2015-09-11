@@ -299,6 +299,10 @@ body > footer ul.list-inline#footer-menu li:first-child:before {
     width: 220px;
 }
 
+.post-single .post-image {
+    margin-bottom: 10px;
+}
+
 @media (max-width: 992px) {
     .post-single .post-info {
         width: 160px;

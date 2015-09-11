@@ -38,6 +38,13 @@
                 </div>
                 <div class="col-xs-9">
                     <h1 class="post-title text-center">{{{title}}}</h1>
+
+                    {{#if image}}
+                        <section class="post-image text-center">
+                            <a href="{{url}}"><img src="{{image}}" alt="{{{title}}}" /></a>
+                        </section>
+                    {{/if}}
+
                     <section class="post-content">
                         {{content}}
                     </section>

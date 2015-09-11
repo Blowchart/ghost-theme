@@ -5,11 +5,11 @@
         <header class="post-header">
             <h2 class="post-title text-center"><a href="{{url}}">{{{title}}}</a></h2>
         </header>
-        <section class="post-image text-center">
-            {{#if image}}
-            <a href="{{url}}"><img src="{{image}}" alt="{{{title}}}" /></a>
-            {{/if}}
-        </section>
+        {{#if image}}
+            <section class="post-image text-center">
+                <a href="{{url}}"><img src="{{image}}" alt="{{{title}}}" /></a>
+            </section>
+        {{/if}}
         <footer class="post-footer">
             <div class="post-meta">
                 <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMM YYYY"}}</time>

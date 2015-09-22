@@ -189,6 +189,11 @@ body > footer ul.list-inline#footer-menu li:first-child:before {
     padding: 20px;
 }
 
+.post-list .post-comments:before {
+    content: "\b7";
+    padding-right: 3px;
+}
+
 .post-content {
     font-size: 16px;
     line-height: 1.43;
@@ -223,6 +228,7 @@ body > footer ul.list-inline#footer-menu li:first-child:before {
 
 .share {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .share .btn {
@@ -361,6 +367,27 @@ body > footer ul.list-inline#footer-menu li:first-child:before {
     }
 }
 
+@media (max-width: 650px) {
+    .post-list .post-comments:before {
+        display: none;
+    }
+
+    .post-list .post-meta .pull-left,
+    .post-list .post-meta .pull-right {
+        float: none !important;
+    }
+
+    .post-list .post-comments,
+    .post-list .post-tags {
+        display: block;
+        clear: both;
+    }
+
+    .post-list .post-comments {
+        float: right;
+    }
+}
+
 @media (max-width: 500px) {
     #navigation-bar {
         text-align: center;
@@ -438,6 +465,11 @@ body > footer ul.list-inline#footer-menu li:first-child:before {
 
     .post-tags {
         float: none !important;
+    }
+
+    .post-list .post-comments {
+        float: none;
+        margin-bottom: 7px;
     }
 }
 

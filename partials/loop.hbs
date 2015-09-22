@@ -1,24 +1,30 @@
 {{! This is the post loop - each post will be output using this markup }}
 <div class="post-list">
-{{#foreach posts}}
-    <article class="{{post_class}}">
-        <header class="post-header">
-            <h2 class="post-title text-center"><a href="{{url}}">{{{title}}}</a></h2>
-        </header>
-        {{#if image}}
-            <section class="post-image text-center">
-                <a href="{{url}}"><img src="{{image}}" alt="{{{title}}}" /></a>
-            </section>
-        {{/if}}
-        <footer class="post-footer">
-            <div class="post-meta">
-                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMM YYYY"}}</time>
-                {{#author}}by <a href="{{url}}">{{name}}</a>{{/author}}
-                {{#if tags}}<div class="pull-right post-tags">{{tags separator=" | "}}</div>{{/if}}
-            </div>
-        </footer>
-    </article>
-{{/foreach}}
+    {{#foreach posts}}
+        <article class="{{post_class}}">
+            <header class="post-header">
+                <h2 class="post-title text-center"><a href="{{url}}">{{{title}}}</a></h2>
+            </header>
+            {{#if image}}
+                <section class="post-image text-center">
+                    <a href="{{url}}"><img src="{{image}}" alt="{{{title}}}" /></a>
+                </section>
+            {{/if}}
+            <footer class="post-footer">
+                <div class="post-meta">
+                    <div class="pull-left">
+                        <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMM YYYY"}}</time>
+                        {{#author}}by <a href="{{url}}">{{name}}</a>{{/author}}
+                        <span class="post-comments"><a href="{{url}}#disqus_thread">Comments</a></span>
+                    </div>
+                    {{#if tags}}
+                        <div class="pull-right post-tags">{{tags separator=" | "}}</div>
+                    {{/if}}
+                    <div class="clearfix"></div>
+                </div>
+            </footer>
+        </article>
+    {{/foreach}}
 </div>
 
 {{! Previous/next page links - displayed on every page }}

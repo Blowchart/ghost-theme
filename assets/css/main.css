@@ -97,6 +97,14 @@ a:hover {
     color: #343b5f;
 }
 
+.post-title {
+    font-size: 40px;
+}
+
+body > .container p {
+    font-size: 18px;
+}
+
 body > .container {
     padding-top: 83px;
 }

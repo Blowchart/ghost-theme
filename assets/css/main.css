@@ -197,6 +197,11 @@ body > footer ul.list-inline#footer-menu li:first-child:before {
     padding: 20px;
 }
 
+.post-list .post-comments:before {
+    content: "\b7";
+    padding-right: 3px;
+}
+
 .post-content {
     font-size: 16px;
     line-height: 1.43;
@@ -231,6 +236,7 @@ body > footer ul.list-inline#footer-menu li:first-child:before {
 
 .share {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .share .btn {
@@ -307,6 +313,10 @@ body > footer ul.list-inline#footer-menu li:first-child:before {
     width: 220px;
 }
 
+.post-single .post-image {
+    margin-bottom: 10px;
+}
+
 @media (max-width: 992px) {
     .post-single .post-info {
         width: 160px;
@@ -362,6 +372,27 @@ body > footer ul.list-inline#footer-menu li:first-child:before {
 
     .post-single .post-columns > div .post-info hr {
         display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .post-list .post-comments:before {
+        display: none;
+    }
+
+    .post-list .post-meta .pull-left,
+    .post-list .post-meta .pull-right {
+        float: none !important;
+    }
+
+    .post-list .post-comments,
+    .post-list .post-tags {
+        display: block;
+        clear: both;
+    }
+
+    .post-list .post-comments {
+        float: right;
     }
 }
 
@@ -442,6 +473,11 @@ body > footer ul.list-inline#footer-menu li:first-child:before {
 
     .post-tags {
         float: none !important;
+    }
+
+    .post-list .post-comments {
+        float: none;
+        margin-bottom: 7px;
     }
 }
 

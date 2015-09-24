@@ -101,7 +101,7 @@ a:hover {
     font-size: 40px;
 }
 
-body > .container p {
+body .post-content {
     font-size: 18px;
 }
 
